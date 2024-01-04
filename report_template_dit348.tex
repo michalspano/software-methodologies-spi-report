@@ -72,15 +72,15 @@ Gothenburg, Sweden}}
 
 \begin{abstract}
 % This document is a template. The various components of your essay (title,
-  % headings, etc.) are already defined here. Please note that the headings
-  % must NOT change unless explicitly stated below. That is, you MUST use the
-  % predefined headings. Make sure to retain font sizes, line spacing, column
-  % width, and margins. Not following this template in either structure or
-  % layout will lead to a FAIL. Remember: the criteria for attaining the grades
-  % are defined in the course syllabus. To get a pass with distinction (5), you
-  % need to solve the bonus task (Section~\ref{sec:bonus_task}). Please replace
-  % this abstract with your own text, briefly state what this report is about,
-  % and summarize the key take-aways.
+% headings, etc.) are already defined here. Please note that the headings
+% must NOT change unless explicitly stated below. That is, you MUST use the
+% predefined headings. Make sure to retain font sizes, line spacing, column
+% width, and margins. Not following this template in either structure or
+% layout will lead to a FAIL. Remember: the criteria for attaining the grades
+% are defined in the course syllabus. To get a pass with distinction (5), you
+% need to solve the bonus task (Section~\ref{sec:bonus_task}). Please replace
+% this abstract with your own text, briefly state what this report is about,
+% and summarize the key take-aways.
 
 TODO
 \end{abstract}
@@ -161,23 +161,105 @@ Lego Scrum workshop, the team members are not obliged to hold such meetings,
 since the team merely consists of six members, and the workshop itself is not
 meant to last longer than four hours.
 
+A high-level overview of the process with the use of the SPEM 2.0 meta-model
+can be seen in Figure~\ref{fig:process-diagram}.
+
 % TODO: can add more text here if the page limit permits.
 
 \section{Experiences in the Scrum Workshop}
 \label{sec:experiences}
-In this section, you should describe your experiences during the first Scrum Lego workshop. Put a special focus on how you and your group were using the process, which parts of the process worked well, and which parts of the process did not work well. For the latter part, analyze the reasons that caused problems. Use at least three references to the literature (e.g., \cite{CaterSteel2006}, \cite{Abrahamsson2002}) to identify if the issues you encountered are general problems or specific to your effort.
 
-You can use the results of the second assignment. While it is okay if members of the same group provide similar answers, each group member has to formulate this section independently.
+% In this section, you should describe your experiences during the first Scrum
+% Lego workshop. Put a special focus on how you and your group were using the
+% process, which parts of the process worked well, and which parts of the
+% process did not work well. For the latter part, analyze the reasons that
+% caused problems. Use at least three references to the literature (e.g.,
+% \cite{CaterSteel2006}, \cite{Abrahamsson2002}) to identify if the issues you
+% encountered are general problems or specific to your effort.
 
-If you did not attend the Scrum Lego workshop, find literature that describes development efforts and the problems within them. Describe and analyze at least five such papers, which problems have been encountered, what the underlying reasons for the problems were, and whether the issues encountered were general or not. If you go with this option, use the heading ``Reported Experiences in Development Efforts'' for this section.
+On the whole, the aforementioned process, {\fontfamily{qhv}\selectfont AKAMMO},
+seemed to be a viable choice for the first Lego Scrum Workshop. The team members
+considered the process to be flexible enough to accommodate the needs of the
+team, and, at the same time, it was not too rigid to hinder the team's progress.
 
+The process has been followed in the manner described in the previous section
+(Section~\ref{sec:process}) with little to no deviations. Indeed, it was the
+first time such a process was put to use, and, as a result, the team members
+were able to evaluate the possible shortcomings of the process and, in turn,
+suggest improvements, as well as highlight the parts of the process that worked
+up to the expectations. The following subsections discuss the observations made
+by the team members.
+
+First and foremost, the team members have felt that initiating a sprint with a 
+\textbf{sprint planning} enabled them to have a clear understanding of the requirements
+that were to be worked on. Secondly, it was observed that merging the sprint
+review and retrospective into a \textbf{single meeting} was a logical choice. In most
+cases, such a meeting merely consisted of a brief discussions of the difficulties
+encountered by the team members with a subsequent overview of the progress made.
+So, it was deemed unnecessary to have two separate meetings for particular a sprint.
+Additionally, omitting the stand-up meetings was likewise seen as a reasonable
+decision because: (i) the team consisted of only six members, (ii) the workshop
+was not meant to last longer than four hours, and (iii) the team members were
+able to communicate with each other without any issues throughout the workshop
+(all team members were located in the same room). Interestingly, this approach
+(mainly supported by the last two points) proved to be so effective that no
+\textit{"emergency breaks"} were called by any of the team members.
+
+Nonetheless, there have been several concerns that were raised by the team
+members, and these are discussed in the following subsections with some
+relevant references to the suggested literature. Firstly, a lack of a sensible
+\textbf{Definition of Done} (abbreviated as DoD) was observed. Put simply, a
+DoD is a set of criteria points applied iteratively to each granular increment
+of a product to attest that the increment is of a desired quality
+\cite{Kopczynska2022} when considered to be \textit{done}. The DoD principle is
+a crucial component of the product's quality assurance, and, as Abrahamsson and
+Kautz \cite{Abrahamsson2002} point out, quality assurance incorporates an
+ability to identify defects as early as possible---this becomes viably
+achievable with a well-defined DoD.
+
+In turn, not having a DoD in place might result in a product that is of
+undesirable quality or a product that elevated the costs of its development.
+Moreover, the lack of a DoD might cause misunderstandings between the team
+members and the PO which distresses the overall progress of the project. These
+claims are supported by a study conducted by Kopczynska et al.
+\cite{Kopczynska2022}.
+
+Furthermore, during the second and third sprints, the team members \textbf{omitted
+assigning story points} to the user stories. This arose from the fact that the
+team members were so emerged in working on the individual user stories that
+they did not feel the need to assign story points to them. Undeniably, this
+might lead to a serious threat in a real-word project. As Abrahamsson and Kautz
+\cite{Abrahamsson2002} observe, it is a recurring issue that teams conduct improper
+estimations---in our case, the estimations were not made at all. If a certain
+risk (of any rather serious nature) were to occur, the lack of estimations
+would make it difficult (and in some cases impossible) to assess the impact of
+the risk on the project's progress.
+
+Lastly, it has been observed that the process did not entail any \textbf{cross-team
+communication efforts}. However, the nature of the Lego Scrum workshop was to
+produce a city environment with a set of buildings, where each team was
+responsible for one (or more) buildings. It is, in this case, unavoidable that
+the buildings are interconnected in some way, and, as a result, the teams were
+required to communicate with each other. This fact was not taken
+into account when designing the process, and proved to be a bottleneck for the
+team's progress. This is, in fact, not an issue specific to our endeavor,
+albeit a rather general problem. Larsson and Larsson \cite{Larsson2020}
+postulate that conducting cross-team collaborative approaches to lessen
+integration risks is unavoidable, and should not be disregarded in a
+high-quality process. Cater-Steel et al. \cite{CaterSteel2006} further
+emphasize the importance of cross-team communication by stating, quote,
+\textit{"[...] high quality external expertise is [even] more critical than top
+management support"}. It is thereby evident that the lack of cross-team
+communication poses a serious threat that should be addressed in the future
+stages of the maturity of the process.
 
 \begin{figure*}
 	\centering
-	\includegraphics[width=0.9\textwidth]{placeholder_diagram}
-	\caption{Placeholder diagram showing your envisioned process}
-	\label{fig:placeholderdiagram}
+	\includegraphics[width=0.9\textwidth]{process-diagram.png}
+  \caption{{\fontfamily{qhv}\selectfont AKAMMO} SPEM 2.0 diagram (initial version)}
+	\label{fig:process-diagram}
 \end{figure*}
+
 \section{Software Process Improvement Techniques}
 \label{sec:spi-techniques}
 Provide at least three examples of SPI methods/models/techniques (for an overview, see, e.g., \cite{Pettersson2008}). Describe each of them together with at least one advantage and one disadvantage.
@@ -222,8 +304,8 @@ It cannot be used to improve a 3 (pass) either.
 
 In the workshops, you observed many issues that related to inter-team coordination. One way to address those issues is to have more frequent Scrum of Scrum meetings. Another way to solve them is to have coordination artifacts that create a common understanding between different teams. Find at least three different peer-reviewed sources in the literature that discuss inter-team coordination and/or Scrum of Scrum meetings. Explain at least two challenges that have been reported connected to Scrum of Scrum meetings. Explain and justify whether you would recommend big companies to rely on frequent Scrum of Scrum meetings or whether you think other mechanisms are better for inter-team coordination. 
 
-
 If you decide to submit the bonus task, you get 1/2 page for it. The new page limit will be 6.5 pages.
+
 \section{Summary and Lessons Learned}
 \label{sec:summary}
 In the summary section, you should briefly summarize what your report is about and present your main findings/consequences.
