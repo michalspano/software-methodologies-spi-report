@@ -262,11 +262,86 @@ stages of the maturity of the process.
 
 \section{Software Process Improvement Techniques}
 \label{sec:spi-techniques}
-Provide at least three examples of SPI methods/models/techniques (for an overview, see, e.g., \cite{Pettersson2008}). Describe each of them together with at least one advantage and one disadvantage.
-Relate each of those methods/models/techniques to the problems you encountered and described in Section~\ref{sec:experiences}.
-Explain whether they are applicable to your issues and why.
 
-This section must be worked on individually.
+% Provide at least three examples of SPI methods/models/techniques (for an
+% overview, see, e.g., \cite{Pettersson2008}). Describe each of them together
+% with at least one advantage and one disadvantage.
+
+In our ever-emerging world of software engineering, there is a plethora of SPI
+methods, models, and techniques that are available to the practitioners.
+Examples of some common SPI models include the Capability Maturity Model
+Integration (CMMI), the ISO/IEC 15504 standard, or a more lightweight approach,
+the iFLAP model \cite{Pettersson2008}, to name a few. In the following
+section, I will briefly describe some of the techniques that are introduced by
+iFLAP in relation to the process that was designed for the Lego Scrum workshop.
+CMMI and ISO/IEC 15504 are not discussed in this section, since our process is
+merely applicable for a small-scale project (with a defined time frame of not
+more than four hours), therefore, the aforementioned models may not be suitable
+for our endeavor.
+
+\textbf{{\fontfamily{qhv}\selectfont iFLAP}} is an inductive process assessment
+framework that largely incorporates the involvement of the practitioners in the
+assessment process \cite{Pettersson2008}, \cite{Malvius2009}. Its core
+principles are to: (i) construct a feasible selection of roles (and projects),
+(ii) gather data points, document them and triangulate the improvement issues,
+and (iii) construct an improvement plan based on the analyzed data, identify
+dependencies among the improvement issues, and prioritize them; these key
+principles [of iFLAP] are adapted from the summary provided by Pettersson et
+al. \cite{Pettersson2008}.
+
+A central part of iFLAP is the selection of \textbf{roles} that are to be
+involved in the assessment process. This way, once the analysis of the gathered
+data is completed, the findings represent viewpoints of a broader spectrum
+which is beyond the team's level. Having applied such a technique to our
+process, we would, for instance, be able to obtain insights from the PO(s),
+team members, the instructor(s), other teams, scrum masters, and so forth. This
+would allow us to identify the shortcomings of the process from the perspective
+of different actors. As a result, the concern that was discussed, for instance,
+in Section~\ref{sec:experiences} about the lack of cross-team communication
+would inherently diminish, since the technique induces a need to communicate on
+a wider scale. While the technique appears rather straightforward, it does
+present several concerns. The selection of the roles is a time-consuming
+process and, consequently, might hinder the progress of the project.
+Additionally, biases may influence role selection, and thus the assessment
+findings may provide inaccurate and unreliable outcomes.
+
+% TODO: check the two sections before working further on the report.
+Furthermore, iFLAP suggests to \textbf{gather data} from the selected roles
+through the use of interviews and questionnaires. This would allow us to obtain
+a more detailed view of the issues that were encountered during the collective
+effort. However, similar to the previous technique, the primary limitation of
+this technique is the time that is required to gather the data. Interviews, on
+a general note, do provide valuable insights into the aspects discussed, albeit
+they tend to be lengthy and time-consuming. Questionnaires, on the other hand,
+are rather straightforward to conduct, but they do not provide as much detail
+as interviews do; furthermore, an analysis of a questionnaire becomes feasible
+with some automated tools or scripts (which is not too difficult to implement).
+Nevertheless, having applied this technique to our process, we could leverage
+the data gathered to enhance the process in the future stages of its maturity;
+for instance, we could identify a new strategy on how DoD is to be formulated
+and communicated effectively, or how to more accurately assign story points to
+the user stories that are to be implemented.
+
+Ultimately, iFLAP further recommends to identify \textbf{dependencies among
+improvement issues} as well as \textit{"package"} the improvement issues into
+improvement areas \cite{Pettersson2008}, \cite{Malvius2009}. For instance, the
+lack of a DoD is an improvement issue and corresponds to an improvement area of
+\textit{quality assurance}. The identification of such dependencies allows the
+team to tackle the issues in a more efficient manner. Moreover if a certain
+dependency is found, then a successful resolution of one issue might result in
+a successful resolution of another issue, or, at least, provide an indication
+of how to resolve the latter issue. This technique, under general
+circumstances, is rather straightforward to implement; however, an extensive
+domain knowledge is required to be able to draw dependencies between the
+improvement areas, and, in a larger-scale project, this becomes
+resource-intensive. Though, in our case, the technique is relevant and feasible
+to implement---it must be, however, assumed that the team members have a
+sufficient understanding of the domain (i.e., Lego bricks and their usage) and,
+as a result, can draw dependencies between the improvement areas.
+
+% Relate each of those methods/models/techniques to the problems you
+% encountered and described in Section~\ref{sec:experiences}.
+% Explain whether they are applicable to your issues and why.
 
 \section{SPI Proposal for future Scrum Development Efforts}
 \label{sec:proposal}
