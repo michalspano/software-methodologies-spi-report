@@ -343,25 +343,173 @@ between the improvement issues in a sensible manner.
 
 \section{SPI Proposal for future Scrum Development Efforts}
 \label{sec:proposal}
-In this section, you should discuss and explain the concrete SPI steps that you suggest to take in order to improve the process you applied during the first Scrum Lego Workshop. First, define at least three goals for an SPI proposal based on what you wrote in Section~\ref{sec:experiences}. Second, define questions and metrics you connect to those goals.
-Then, use the tools that were introduced in the course (e.g., GQM or CMMI roadmaps) to define at least two concrete improvement steps per goal. Also, include a plan for how to measure whether your improvement effort was successful. Be careful to reference the corresponding literature when you mention a tool for the first time.
 
-You can use the results of any of the assignments and in-class exercises for this section. While it is okay if members of the same group provide similar answers, each group member has to formulate this section independently.
+% In this section, you should discuss and explain the concrete SPI steps that
+% you suggest to take in order to improve the process you applied during the
+% first Scrum Lego Workshop. First, define at least three goals for an SPI
+% proposal based on what you wrote in Section~\ref{sec:experiences}. Second,
+% define questions and metrics you connect to those goals.
 
-If you did not attend the Scrum Lego workshop, base your proposal on your analysis in Section~\ref{sec:experiences}. Follow the same guidelines as above for the Scrum Lego workshop. If you go with this option, use the heading ``SPI Proposal for an Industrial Case Study'' for this section.
+
+% TODO: examine the structure and the formatting of this section.
+
+% A measurement plan contains:
+% - Which information is collected?
+% - What is the unit of measurement?
+% - What is the source of the data?
+% - By whom is the information collected?
+% - Where is the information stored?
+
+In this section, the {\fontfamily{qhv}\selectfont GQM} tool is utilized as part
+of the SPI proposal. Basili, Caldiera, and Rombach \cite{Caldiera1994} define
+CQM as an approach which underscores the importance of organizations defining
+their \textbf{goals}, linking them to operational data, and establishing a
+framework for data interpretation in order to \textbf{measure purposefully}
+their progress towards the goals. It was originally defined to evaluate defects
+in a set of NASA projects \cite{Caldiera1994}, though, over the years, it has
+been tailored to be applicable to a broader spectrum of projects.
+
+Herein, a goal is written in the following manner: \textit{X)}, where
+\textit{X} is an ordinal. A question follows the notation
+\textbf{Q\textit{X.Y}}, where \textit{Y} is the question's ordinal. Similarly,
+a metric follows a similar notation, notably, \textbf{M\textit{X.Z}}, where
+\textit{Z} is the metric's ordinal. A metric, in this context, provides a
+measurement plan with a general idea of how the data is to be collected and
+analyzed. In some cases, there's an example provided for the ease of
+understanding.
+
+Based on the observations made in Section~\ref{sec:experiences}, the following
+goals are defined for the SPI proposal:
+
+\begin{enumerate}
+  \item Improve the clarity and consistency of task completion from the
+    development team’s viewpoint.
+  \item Enhance the estimation and planning with the help of story points
+    from the viewpoint of the development team. 
+  \item Strengthen cross-team communication and integration with a
+    designated role from the development team. 
+\end{enumerate}
+
+With that in mind, 1) is accompanied with the following questions and metrics:
+
+\begin{itemize}
+  \item \textbf{Q1.1}: What is the team members' understanding the DoD?
+  \item \textbf{M1.1}: Number of items in the DoD that team members share a
+    common understanding of. The data would be obtained from the team members
+    in a designated questionnaire -- each team member would be asked to define,
+    in own words, what the items of the DoD are. Then, with the help of a
+    machine learning algorithm that is able to parse human language (e.g., a
+    recurrent neural network), the responses would be clustered into a set of
+    groups where each group represents an overlap of the responses. The number
+    of groups would correspond to the metric. In case such an algorithm is not
+    available, the responses can be manually clustered into groups. The
+    information would be stored on a local machine of one of the team members
+    and would not be shared with any third parties. Ultimatelt, the obtained
+    value should be as close to the total number of items in the DoD as
+    possible.
+  \item \textbf{Q1.2}: How consistently is the Definition of Done applied to
+    carrying work related to user stories among the team?
+  \item \textbf{M1.2}: A formulate in the following manner is to be used:
+    $\frac{n_d}{n} \times 100$ (\%), where $n_d$ is the number of tasks that
+    followed the DoD principles when delivered to the PO, and $n$ is the number
+    of all tasks expected to be worked on within a set time frame (such as a
+    sprint). In the context of a Lego Scrum workshop, it is difficult to keep
+    track of how many times the DoD was applied, since the team members may
+    report inaccurate data. However, in the context of a real-world software
+    project, this metric can be easily obtained by observing whether the DoD
+    was appended to a merge request (or a pull request) that was merged into
+    the main branch of the project's repository. Nevertheless, for our case, we
+    assume that the team members are honest and report accurate data.
+    Subsequently, the aforementioned formula is applied and team members are
+    made aware of the results. The calculations are to be stored (and
+    performed) on a local machine of one of the team members. Supposing that
+    each sprint is evaluted separately, the obtained values can be compared and
+    an increase or decrease in the metric can be observed. Ideally, each sprint
+    should yield a value of $\approx 100$. Team members are encouraged to set
+    an acceptable threshold interval for the metric, say $[90, 100]$, and
+    strive to achieve a value within the interval. This interval can fluctuate
+    depending on the team's needs.
+\end{itemize}
+
+Secondly, 2) is accompanied with the following questions and metrics:
+
+% TODO: check the wording
+\begin{itemize}
+  \item \textbf{Q2.1}: How accurately do the assigned user story points align
+    with the actual time invested?
+  \item \textbf{M2.1}:
+    Decide how many minutes one story point represents (this is to be decided
+    at the beginning of a sprint by all team members). For this example,
+    let's say that one story point represents 5 minutes. A randomly chosen team
+    member determines the total number of story points completed in a sprint, say
+    $s$, and then collects the data from the team members regarding the time
+    spent working on the user stories [in minutes], say $t$. The team members
+    would be previously instructed on how to track the time spent working during a
+    sprint with the help of an appropriate tool such as Toggl (or any other
+    tool that is deemed suitable). The chosen team member would then perform a
+    simple calculation on their local machine in the following way:
+    $\frac{s}{t}$. In this case, the ideal ratio is $\approx \frac{1}{5}$. A
+    threshold interval can be defined as $[\frac{1}{5} - \epsilon, \frac{1}{5}
+    + \epsilon]$, where $\epsilon$ is some small number, say $0.1$. If the
+    ratio falls within the threshold interval, then the story points are
+    considered to be accurate -- this ratio can be altered to fit the team's
+    needs and can be derived from the team's experience in the previous sprints
+    and/or projects. The results, for a future reference, can be stored in a
+    primary communication channel (e.g., Slack, Discord, etc.).
+  \item \textbf{Q2.2}: How can story points enhance the workload distribution
+    among team members?
+  \item \textbf{M2.2}: 
+    Establish how many story points a team member is expected to complete
+    during a sprint (this value is decided by the team members at the beginning
+    of a sprint), namely $m$. Assume that team members should work on an equal
+    basis, i.e., they should complete the same number of story points. Measure
+    the number of story points that each team member completes during a sprint,
+    and assign them to variables $x_1, x_2, \dots, x_n$, where $n$ is the size
+    of the team (it would be the responsibility of each team members to keep
+    track of and report the number of story points they completed). At the end
+    of the sprint, a randomly chosen team member collects all data entries and
+    performs a calculation on their local machine in the following manner:
+    $\beta = \sum_{i=1}^{n} |x_i - m|$. Herein, $\beta$ is an arbitrary value
+    that represents the workload distribution among the team members. The
+    closer $\beta$ is to $0$, the more evenly distributed the workload is. In
+    that essense, similarly to the previous metric, a threshold interval can be
+    defined, and an appropriate $\epsilon$ can be chosen (this is to be
+    determined by the team members).
+\end{itemize}
+
+Lastly, 3) is accompanied with the following questions and metrics:
+
+% TODO: check the wording; apply all principles to construct a measurement plan.
+\begin{itemize}
+  \item \textbf{Q3.1}: How effective are the cross-team communication efforts?
+  \item \textbf{M2.1}: An averaged satisfaction score that is obtained from
+    the team members and all other parties involved in any cross-team meetings.
+    A traditional Likert scale from $1 \to 5$ can be used to obtain the scores,
+    where $1$ corresponds to \textit{"Strongly dissatisfied"} and $5$ corresponds
+    to \textit{"Strongly satisfied"}. Ideally, the team should strive to obtain
+    a score of $\approx 5$.
+  \item \textbf{Q2.2}: How well do contributions from all teams function together?
+  \item \textbf{M2.2}: The number of integration problems occurring during the
+    project (or during a sprint, if a more granular approach is desired).
+\end{itemize}
+
+% TODO: to define at least two concrete improvement steps per goal; USE A4!
+% Careful to reference the corresponding literature when you - use literature.
 
 \section{Implementation of an SPI Initiative}
 \label{sec:implementation}
-You implemented an SPI initiative in the second workshop.
-Give a summary of at least two actual changes that were implemented by your group. These might differ from your original proposal, since not all of your ideas from the proposal might be feasible. Describe at least two effects of those changes and analyze why these effects manifested themselves.
-For the selected changes, provide at least one example of concrete measurements that you have made.
 
-This section should contain the overall result for the entire group. Still, each group member has to formulate this section independently.
-
-If you did not attend the Lego workshops, this section may be dedicated to a discussion of challenges in SPI projects. Find at least four relevant references that mention and analyze challenges and compile an overview of what has been observed in the literature. Relate these challenges to empirical studies that have been published and to your personal experience. Identify the SPI techniques that might help to overcome these challenges. Critically discuss the solution approaches from the papers.
+% If you did not attend the Lego workshops, this section may be dedicated to a
+% discussion of challenges in SPI projects. Find at least four relevant
+% references that mention and analyze challenges and compile an overview of
+% what has been observed in the literature. Relate these challenges to
+% empirical studies that have been published and to your personal experience.
+% Identify the SPI techniques that might help to overcome these challenges.
+% Critically discuss the solution approaches from the papers.
 
 \section{Redesign of the Software Process}
 \label{sec:redesign}
+
 After reflecting on the SPI experiences, think about how you would design your process for the Lego workshop if you could do it again.
 Create a SPEM 2.0 diagram and replace Figure~\ref{fig:placeholderdiagram} with it.
 Briefly describe at least the key task definitions, role definitions, and work product definitions that you aim to use, with 1--2 sentences per definition.
@@ -370,6 +518,7 @@ This section must be worked on individually.
 
 \section{Bonus Task: Scrum of Scrums}
 \label{sec:bonus_task}
+
 This task needs to be solved to get a 5 (pass with distinction).
 Note that to get a 5, all other tasks need to be at a level that fulfill the criteria for a 4.
 The bonus task cannot be used to pass the exam if you would fail it based on the other tasks.
