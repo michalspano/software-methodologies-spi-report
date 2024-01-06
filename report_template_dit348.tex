@@ -166,9 +166,6 @@ Lego Scrum workshop, the team members are not obliged to hold such meetings,
 since the team merely consists of six members, and the workshop itself is not
 meant to last longer than four hours.
 
-A high-level overview of the process with the use of the SPEM 2.0 meta-model
-can be seen in Figure~\ref{fig:process-diagram}.
-
 % TODO: can add more text here if the page limit permits.
 
 \section{Experiences in the Scrum Workshop}
@@ -264,7 +261,7 @@ process.
 \begin{figure*}
 	\centering
 	\includegraphics[width=0.9\textwidth]{process-diagram.png}
-  \caption{{\fontfamily{qhv}\selectfont AKAMMO} SPEM 2.0 diagram (initial version)}
+  \caption{SPEM 2.0 diagram of the updated process}
 	\label{fig:process-diagram}
 \end{figure*}
 
@@ -327,6 +324,8 @@ written by any general-purpose programming language (e.g., Python, Julia,
 etc.). Nevertheless, having applied this technique to our process, we could
 leverage the gathered data to enhance the process in the future stages of its
 maturity. For instance, we could identify a new strategy on how a DoD is to be
+modeled, or, perhaps, we could identify a new technique to estimate the user
+stories.
 
 Ultimately, iFLAP further recommends to identify \textbf{dependencies between
 improvement issues} as well as \textit{"package"} the improvement issues into
@@ -520,9 +519,8 @@ hold user stories that are subject to be reviewed based on the principles of
 the team's DoD. Afterwards, if all items of the DoD are satisfied, the user
 story is moved to the \textit{Done} column. Otherwise, the user story is moved
 back to the \textit{To Do} column. So, the updated flow would be as follows:
-
-$$\textit{To Do} \to \textit{In Progress} \leftrightarrow \textit{QA} \to
-\textit{Done}$$
+$\textit{To Do} \to \textit{In Progress} \leftrightarrow \textit{QA} \to
+\textit{Done}$.
 
 % TODO: revisit if these are actually feasible.
 
@@ -555,22 +553,54 @@ measurement plans, notably M3.1 and M3.2.
 \section{Implementation of an SPI Initiative}
 \label{sec:implementation}
 
+Beacause of an illness, I was unable to attend the second Lego Scrum workshop,
+so the alternative task is to be completed instead in this section instead.
+
+TODO: finish this section. Use the paper \cite{Niazi2010} as a reference.
+Use the extra assignment as a reference too.
+
 % If you did not attend the Lego workshops, this section may be dedicated to a
 % discussion of challenges in SPI projects. Find at least four relevant
 % references that mention and analyze challenges and compile an overview of
-% what has been observed in the literature. Relate these challenges to
-% empirical studies that have been published and to your personal experience.
+% what has been observed in the literature.
+
+% Relate these challenges to empirical studies that have been published and to
+% your personal experience.
+
 % Identify the SPI techniques that might help to overcome these challenges.
 % Critically discuss the solution approaches from the papers.
 
 \section{Redesign of the Software Process}
 \label{sec:redesign}
 
-After reflecting on the SPI experiences, think about how you would design your process for the Lego workshop if you could do it again.
-Create a SPEM 2.0 diagram and replace Figure~\ref{fig:placeholderdiagram} with it.
-Briefly describe at least the key task definitions, role definitions, and work product definitions that you aim to use, with 1--2 sentences per definition.
+An updated version of the diagram can be seen in
+Figure~\ref{fig:process-diagram}. In this section, some key aspects of the
+diagram are described in more detail.
 
-This section must be worked on individually.
+Most importantly, the task definition \textit{"Cross-team meeting"} has been
+added. This change should address the SPI initiative in terms of enhancing
+cross-team communication efforts and the detection of integration issues (see
+the last paragraph of Section~\ref{sec:experiences} and 3) from
+Section~\ref{sec:proposal}). Simultaneously, a new role titled
+\textit{"Integration Lead"}, whose primary responsibility is represented with a
+new task definition \textit{"Oversee integration defects"}, has been added. The
+addition of this role is supposed to realize the second improvement step of 3)
+(see Section~\ref{sec:proposal}). During these meetings, an
+\textit{"Integration Issue Log"} is to be utilized which the Integration Lead
+is responsible for. Furthermore, participation of the PO is encouraged, and the
+other teams are invited to join the meetings too---they are depicted in a
+\textit{cluster} of several role definitions titled \textit{"Other Teams"}.
+
+The \fontfamily{qhv}\selectfont AKAMMO\rmfamily{} team members are represented
+with a single role definition, and the Integration Lead is a member of the team. The
+team, moreover, is supposed to maintain the DoD and the Kanban board (which are
+work product definitions). The team also performs \textit{"Sprint Planning"} and
+\textit{"Review \& Retrospective"} meetings (these remain unchanged and the
+descriptions from Section~\ref{sec:process} are still applicable). Lastly,
+following the principles of \textbf{incremental delivery}, the team, after each
+sprint, delivers an increment that undergoes a few stages ultimately resulting
+in an \textit{"evaluated increment"} which servers as a basis for the following
+sprint.
 
 \section{Bonus Task: Scrum of Scrums}
 \label{sec:bonus_task}
