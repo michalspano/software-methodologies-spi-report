@@ -136,10 +136,11 @@ requirements to the members of the team.
 Subsequently, the requirements are assigned \textbf{story points} that
 correspond to the difficulty of their implementation (i.e., the higher
 the number, the more difficult the implementation) based on the Fibonacci
-sequence. Strikingly, Tamrakar and Jørgensen \cite{Tamrakar2012} observe that
-the Fibonacci scale (among other non-linear scales) eliminates the bias that is
-introduced by any linear scale such that humans tend to be biased towards the
-middle of the scale, and thereby non-linear scales yield more accurate results.
+sequence. Strikingly, Tamrakar and J\o{}rgensen \cite{Tamrakar2012} observe
+that the Fibonacci scale (among other non-linear scales) eliminates the bias
+that is introduced by any linear scale such that humans tend to be biased
+towards the middle of the scale, and thereby non-linear scales yield more
+accurate results.
 
 Furthermore, a \textbf{Kanban board} is to be used throughout the workshop to
 categorize each user story into one of the following columns: (i) \textit{To
@@ -558,10 +559,10 @@ measurement plans, notably M3.1 and M3.2.
 \section{Implementation of an SPI Initiative}
 \label{sec:implementation}
 
-Beacause of an illness, I was unable to attend the second Lego Scrum workshop,
+Because of an illness, I was unable to attend the second Lego Scrum workshop,
 so the alternative task is to be completed in this section instead.
 
-A challenge that is commonly encountered is related to the phenomenon of
+A challenge that is commonly encountered is related to the concept of
 \textbf{Change Management}. The term refers to the act of companies adapting
 to a change or reorganization at any CMM level \cite{Beecham2003}. It is
 oftentimes the case that, in the event of a low CMM level, employees are
@@ -580,7 +581,7 @@ with knowledge management. To illustrate, Dybå \cite{Dyba2005}, in a paper from
 a positive association between an SPI initiative and the following two learning
 strategies exists: (i) \textit{"exploitation"}, the use of existing knowledge,
 and (ii) \textit{"exploration"}, the acquisition of new knowledge. Furthermore,
-a question is raiseded in terms of what a sensible balance between the two
+a question is raised ed in terms of what a sensible balance between the two
 strategies is. The author concludes that the two strategies are not mutually
 exclusive, and that both learning strategies have a significant contribution to
 the success of the SPI \cite{Dyba2005}. Thereby, practitioners should apply the
@@ -599,13 +600,13 @@ initiative in a way that they are able to communicate the benefits; this is
 achievable with a series of workshops and training sessions \cite{Niazi2006}.
 
 Ultimately, a set of human factors are attributed to the challenges that are
-encountered in SPI projects. Beecham, Hall, and Rainer \cite{Beecham2003}
+encountered in SPI projects. Beecham et al. \cite{Beecham2003}
 postulate that human-related factors such as \textit{"lack of motivation"},
 \textit{"lack of commitment"}, \textit{"lack of training"}, and \textit{"lack
 of experience"}, to name a few, are universally applicable to SPI projects.
 These, however, are not so easily addressed, and require a significant amount
 of time and effort (beyond the management team's control) to be resolved.
-Nevertheless, an empirical study from Pakisan \cite{Danish2010} suggests that
+Nevertheless, an empirical study from Pakistan \cite{Danish2010} suggests that
 \textbf{recognition} is a key factor that motivates employees to perform better,
 which in turn, leads to a more successful SPI effort. The study further
 recommends that the management team should enable employees to participate in
@@ -651,19 +652,52 @@ sprint.
 \section{Bonus Task: Scrum of Scrums}
 \label{sec:bonus_task}
 
-% In the workshops, you observed many issues that related to inter-team
-% coordination. One way to address those issues is to have more frequent Scrum
-% of Scrum meetings. Another way to solve them is to have coordination
-% artifacts that create a common understanding between different teams.
+A common pattern that is observed when using a \textbf{Scrum of Scrums}
+(hereinafter abbreviated as SoS) approach is that the role of a Scrum Master
+during an SoS meeting resembles the role of a Project Manager
+\cite{Larman2010}, and this is not desirable as per the Scrum principles (using
+the well-acclaimed Scrum Guide \cite{Schwaber2020} as a reference). Supposing
+that the Scrum Master does not rotate among the teams, then the Scrum Master,
+put simply, makes decisions on behalf of the teams, so self-organization (which
+is a key principle \cite{Dikert2016}) is not attainable \cite{Larman2010}.
+However, this can, to a certain extent, be mitigated by rotating the role of a
+Scrum Master among the members of the teams. Nevertheless, other challenges are
+still present and are discussed next.
 
-%%%%%%%%%% TASK %%%%%%%%%%
-% Find at least three different peer-reviewed sources in the literature that
-% discuss inter-team coordination and/or Scrum of Scrum meetings. Explain at
-% least two challenges that have been reported connected to Scrum of Scrum
-% meetings. Explain and justify whether you would recommend big companies to
-% rely on frequent Scrum of Scrum meetings or whether you think other
-% mechanisms are better for inter-team coordination. 
-%%%%%%%%%% TASK %%%%%%%%%%
+Paasivaara et al. in their study conclude that SoS meetings do not function
+well in large-scale projects with many participants that represent "disjoint
+interests and concerns" \cite{Paasivaara2012}. Typically, a stand-up is not
+longer than 15 minutes (in a team of 5-9 members, for instance,
+\cite{Schwaber2020}) and, naturally, this time frame is not feasible for an SoS
+effort with many teams participating. Therefore, many of these meetings become
+overly time-consuming and ultimately counterproductive, cause frustration, and
+yield little to no value \cite{Paasivaara2012}. This is likely a rather
+unfortunate result of a phenomenon described by Dings\o{}yr et al.
+\cite{Dingsoyr2019} who state that practitioners embrace frameworks for
+large-scale Agile without a proper consideration of the underlying problem(s)
+they are trying to solve. The authors further postulate that frameworks should
+never represent goals; instead, the frameworks should help to achieve
+particular goals \cite{Dingsoyr2019}. As a consequence, many organizations may
+hurriedly adopt the SoS approach, just because it entails the word
+\textit{"Scrum"} in some way, without considering whether the approach is
+suitable for their needs.
+
+It is therefore evident that SoS meetings \underline{are not} a silver bullet
+to address inter-team coordination in larger companies. In fact, based on the
+previous claims, it is not recommended to solely rely on SoS meetings at all.
+The findings of Paasivaara et al. suggest that SoS meetings can be a viable
+option in the event of \textit{"smaller, focused inter-team meetings with
+participants having joint goals and interests"} \cite{Paasivaara2012}.
+Furthermore, highly skilled teams are assumed with a broad understanding of the
+domain and the Agile practices \cite{Sutherland2007}. On the other hand,
+adapting \textbf{Spotify Guilds} (that largely rely on self-organization and
+autonomy) \cite{Smite2019} may be a more sensible approach, for instance.
+Spotify has been employing Agile principles for many years, and the company has
+been able to scale Agile to great extents \cite{Alqudah2016}. Needless to say,
+their approach may not be a drop-in solution for all arbitrary cases, albeit it
+should be treated as a viable alternative and a source of inspiration for other
+large-scale companies in pursuit of a \textbf{suitable} approach to inter-team
+coordination.
 
 \section{Summary and Lessons Learned}
 \label{sec:summary}
