@@ -56,7 +56,6 @@
 
 \begin{document}
 
-% TODO: examine the feasibility of this title before the submission
 \title{On the Design of Software Processes and Software Process Improvement in
 the Context of Lego Scrum Workshops}
 
@@ -71,18 +70,14 @@ Gothenburg, Sweden}}
 \maketitle
 
 \begin{abstract}
-% This document is a template. The various components of your essay (title,
-% headings, etc.) are already defined here. Please note that the headings
-% must NOT change unless explicitly stated below. That is, you MUST use the
-% predefined headings. Make sure to retain font sizes, line spacing, column
-% width, and margins. Not following this template in either structure or
-% layout will lead to a FAIL. Remember: the criteria for attaining the grades
-% are defined in the course syllabus. To get a pass with distinction (5), you
-% need to solve the bonus task (Section~\ref{sec:bonus_task}). Please replace
-% this abstract with your own text, briefly state what this report is about,
-% and summarize the key take-aways.
-
-TODO
+This paper discusses the design of a software process in the context of Lego
+Scrum workshops as part of the course DIT348 Software Development Methodologies
+offered by Gothenburg University (Sweden). Subsequently, the paper provides
+insights about software process improvement (SPI) techniques and proposes an
+SPI initiative with a redesigned process proposal (accompannied with a SPEM 2.0
+diagram). Ultimately, the paper discusses various challenges that practitioners
+encounter when conducting SPI efforts, and provides an additional insight into
+the feasability of the Scrum of Scrums methodology.
 \end{abstract}
 
 \section{Introduction}
@@ -93,18 +88,20 @@ TODO
 
 A software process is a goal-oriented approach which incorporates a set of
 tools, methods, and practices to produce a software product or a more general
-software service \cite{Munch2012}, \cite{Humphrey1989}.
-With the increasing complexity of software systems, the need for a well-defined
-software process has become more and more significant.
-With that in mind, Basili and Rombach \cite{Basili1988} state that the software
-engineering processes require \textbf{tailorability} because of the diversity
-of the software products and the different environments in which they are
-developed, hence the need for a software process improvement (hereafter SPI)
-initiative.
+software service \cite{Munch2012}, \cite{Humphrey1989}. With the increasing
+complexity of software systems, the need for a well-defined software process
+has become more and more significant. Basili and Rombach \cite{Basili1988}
+state that the software engineering processes require \textbf{tailorability}
+because of the diversity of the software products and the different
+environments in which they are developed, hence the need for a software process
+improvement (hereafter SPI) initiative.
 
 This paper analyzes a designed software process and proposes an SPI initiative 
-in the context of the Lego Scrum workshop that took place during the course.
-Ultimately, ... % <TODO> (one sentence; a discussion topic or something like that). 
+in the context of the Lego Scrum workshops with a redesigned process proposal.
+The claims made are supported by peer-reviewed literature and the course
+material alongside several research studies that are conducted by the frontiers
+of the software engineering field (e.g., \cite{Basili1988},
+\cite{Caldiera1994}, \cite{Schwaber2020}).
 
 \section{Process Defined for the Scrum Workshop}
 \label{sec:process}
@@ -113,7 +110,7 @@ Ultimately, ... % <TODO> (one sentence; a discussion topic or something like tha
 % you chose to apply Scrum, User Story Practice, and Incremental Delivery. Give
 % reasons for why you did or did not use elements from these three practices.
 
-The defined process is titled {\fontfamily{qhv}\selectfont AKAMMO} and primarily
+The defined process is titled {\fontfamily{qhv}\selectfont AKAMMO} and
 utilizes concepts from Scrum and Incremental Delivery, and to a lesser extent,
 User Story Practice \cite{DIT348A1}. Scrum provides a flexible and adaptive
 approach to project management, and encourages transparency in terms of the
@@ -138,38 +135,33 @@ correspond to the difficulty of their implementation (i.e., the higher
 the number, the more difficult the implementation) based on the Fibonacci
 sequence. Strikingly, Tamrakar and J\o{}rgensen \cite{Tamrakar2012} observe
 that the Fibonacci scale (among other non-linear scales) eliminates the bias
-that is introduced by any linear scale such that humans tend to be biased
-towards the middle of the scale, and thereby non-linear scales yield more
-accurate results.
+introduced by any linear scale such that humans tend to be biased towards the
+middle of the scale, and thereby non-linear scales yield more accurate results.
 
-Furthermore, a \textbf{Kanban board} is to be used throughout the workshop to
-categorize each user story into one of the following columns: (i) \textit{To
-Do}, (ii) \textit{In Progress}, (iii) \textit{Done}. The reason why a Kanban
-board was considered can be supported by a claim made by Ahmad et al.
-\cite{Ahmad2014} suggesting that a Kanban board provides visibility to the
-[software] development process, communicates priorities and highlights
-bottlenecks. The process does not assume any type of a board; either a physical
-or a digital board can be used.
+Furthermore, a \textbf{Kanban board} is used throughout the workshop to
+categorize each user story into following columns: \textit{To Do}, \textit{In
+Progress}, \textit{Done}. The reason why a Kanban board was considered can be
+supported by a claim made by Ahmad et al. \cite{Ahmad2014} suggesting that a
+Kanban board provides visibility to the [software] development process,
+communicates priorities, and highlights bottlenecks. No type of a board is
+assumed, either a physical or a digital board can be used at ease.
 
-What's more, a sprint is to last an hour and at the end of each sprint, a
-meeting takes place which is, put simply, a conjunction of a sprint review and
-a sprint retrospective (adapted from Scrum \cite{Schwaber2020}). Herein, the
-team members are to discuss the difficulties they encountered as well as
-evaluate the overall progress made. Consequently, this meeting results in a
-definition of an \textbf{increment} to the product that is to be delivered to
-the PO.
+What's more, a sprint lasts an hour and at the end of each sprint, a meeting
+takes place which is a conjunction of a sprint review and a sprint
+retrospective (adapted from Scrum \cite{Schwaber2020}). Herein, the team
+members discuss the difficulties they encountered and evaluate the overall
+progress carried out. Consequently, this meeting results in a definition of an
+\textbf{increment} that is to be delivered to the PO.
 
 The process, by default, does not schedule any breaks; however, there is a
 possibility of a so-called \textit{emergency break} that can be called by any
-team member at most once every 30 minutes on a team-wide basis.
-Breaks on an individual basis are allowed, but shall not interfere with the
-team's progress. In a typical Scrum environment, stand-up meetings are held
-continuously throughout a set period of time \cite{Schwaber2020}. However, in
-the context of the Lego Scrum workshop, the team members are not obliged to
-hold such meetings, since the team merely consists of six members, and the
-workshop itself is not meant to last longer than four hours.
-
-% TODO: can add more text here if the page limit permits.
+team member at most once every 30 minutes. Breaks on an individual basis are
+allowed, but shall not interfere with the team's progress. In a typical Scrum
+environment, stand-up meetings are held continuously for a set time frame
+(e.g., 15 minutes) \cite{Schwaber2020}. However, in the context of the Lego
+Scrum workshop, the team is not obliged to hold such meetings, since the team
+only consists of six members, and the workshop is not meant to last longer than
+four hours.
 
 \section{Experiences in the Scrum Workshop}
 \label{sec:experiences}
@@ -182,53 +174,44 @@ workshop itself is not meant to last longer than four hours.
 % \cite{CaterSteel2006}, \cite{Abrahamsson2002}) to identify if the issues you
 % encountered are general problems or specific to your effort.
 
-On the whole, the aforementioned process, {\fontfamily{qhv}\selectfont AKAMMO},
-seemed to be a viable choice for the first Lego Scrum Workshop. The team members
-considered the process to be flexible enough to accommodate the needs of the
-team, and, at the same time, it was not too rigid to hinder the team's progress
-\cite{DIT348A2}.
+On the whole, the designed process, {\fontfamily{qhv}\selectfont AKAMMO},
+was a viable choice for the first Lego Scrum Workshop. The team members perceived
+it as flexible enough to accommodate the needs of the team, while not being too
+rigid to hinder the team's progress \cite{DIT348A2}.
 
-The process has been followed in the manner described in the previous section
-(Section~\ref{sec:process}) with little to no deviations. Indeed, it was the
-first time such a process was put to use, and, as a result, the team members
-were able to evaluate the possible shortcomings of the process and, in turn,
-suggest improvements, as well as highlight the parts of the process that worked
-up to the expectations. The following subsections discuss the observations made
-by the team members.
+The process has been followed in the desired manner described in
+Section~\ref{sec:process} very few deviations. The team used the process for
+the first time, allowing them to identify shortcomings (that are addressed in
+the following subsections) propose improvements, and highlight successful
+aspects. 
 
-First and foremost, the team members have felt that initiating a sprint with a 
+Firstly, the team members agreed that initiating a sprint with a 
 \textbf{sprint planning} enabled them to have a clear understanding of the requirements
 that were to be worked on. Secondly, it was observed that merging the sprint
-review and retrospective into a \textbf{single meeting} was a logical choice. In most
-cases, such a meeting merely consisted of a brief discussions of the difficulties
-encountered by the team members with a subsequent overview of the progress made.
-So, it was deemed unnecessary to have two separate meetings for particular a sprint.
-Additionally, omitting the stand-up meetings was likewise seen as a reasonable
-decision because: (i) the team consisted of only six members, (ii) the workshop
-was not meant to last longer than four hours, and (iii) the team members were
-able to communicate with each other without any issues throughout the workshop
-(all team members were located in the same room). Interestingly, this approach
-(mainly supported by the last two points) proved to be so effective that no
-\textit{"emergency breaks"} were called by any of the team members.
+review and retrospective into a \textbf{single meeting} was a logical choice.
+Usually, these meetings briefly covered team difficulties and progress.
+Skipping stand-up meetings was considered reasonable due to the small team size
+(six members), the short duration of the workshop (not exceeding four hours),
+and seamless communication among members in the same room. Remarkably, this
+approach, especially the last two points, proved highly effective, with no team
+member calling for \textit{"emergency breaks"}.
 
-Nonetheless, there have been several concerns that were raised by the team
-members, and these are discussed in the following subsections with some
-relevant references to the suggested literature. Firstly, a lack of a sensible
-\textbf{Definition of Done} (abbreviated as DoD) was observed. Put simply, a
-DoD is a set of criteria points applied iteratively to each granular increment
-of a product to attest that the increment is of a desired quality
-\cite{Kopczynska2022} when considered to be \textit{done}. The DoD principle is
-a crucial component of the product's quality assurance, and, as Abrahamsson and
-Kautz \cite{Abrahamsson2002} point out, quality assurance incorporates an
-ability to identify defects as early as possible---this becomes viably
-achievable with a well-defined DoD.
+However, team members raised various concerns, which are explored in the
+following subsections along with references to relevant literature. Firstly, a
+lack of a sensible \textbf{Definition of Done} (abbreviated as DoD) was
+observed. Put simply, a DoD is a set of criteria points applied iteratively to
+each granular increment of a product to assure that the increment is of a
+desired quality \cite{Kopczynska2022} when considered to be \textit{done}. The
+DoD principle is a crucial component of the product's quality assurance, and,
+as Abrahamsson and Kautz \cite{Abrahamsson2002} point out, quality assurance
+incorporates an ability to identify defects as early as possible---this becomes
+viably achievable with a well-defined DoD.
 
-In turn, not having a DoD in place might result in a product that is of
-undesirable quality or a product that elevated the costs of its development.
-Moreover, the lack of a DoD might cause misunderstandings between the team
-members and the PO which distresses the overall progress of the project. These
-claims are supported by a study conducted by Kopczynska et al.
-\cite{Kopczynska2022}.
+The absence of a Definition of Done (DoD) can lead to an undesirable product
+quality and increased development costs. Additionally, it may cause
+misunderstandings between team members and the PO, hampering overall project
+progress. These (and other) claims are supported by a study conducted by
+Kopczynska et al. \cite{Kopczynska2022}.
 
 Furthermore, during the second and third sprints, the team members \textbf{omitted
 assigning story points} to the user stories. This arose from the fact that the
@@ -295,7 +278,7 @@ principles are to: (i) construct a feasible selection of roles (and projects),
 (ii) gather data points, document them and triangulate the improvement issues,
 and (iii) construct an improvement plan based on the analyzed data, identify
 dependencies among the improvement issues, and prioritize them; these key
-principles [of iFLAP] are adapted from the summary provided by Pettersson et
+principles (of iFLAP) are adapted from the summary provided by Pettersson et
 al. \cite{Pettersson2008}.
 
 A central part of iFLAP is the selection of \textbf{roles} that are to be
@@ -363,8 +346,8 @@ between the improvement issues in a sensible manner.
 
 In this section, the {\fontfamily{qhv}\selectfont GQM} tool is utilized as part
 of the SPI proposal, and is adapted from the assignments of the course that
-the team worked on, notably \cite{DIT348A3}, \cite{DIT348A4}. Basili, Caldiera,
-and Rombach \cite{Caldiera1994} define CQM as an approach which underscores the
+the team worked on, notably \cite{DIT348A3}, \cite{DIT348A4}. Basili et al.
+\cite{Caldiera1994} define CQM as an approach which underscores the
 importance of organizations defining their \textbf{goals}, linking them to
 operational data, and establishing a framework for data interpretation in order
 to \textbf{measure purposefully} their progress towards the goals. It was
@@ -443,8 +426,8 @@ Secondly, 2) is accompanied with the following questions and metrics:
     say that one story point represents 5 minutes. Then, once the sprint has
     elapsed, a randomly chosen team member collects the total number of story
     points completed during the sprint, say $s$, and afterwards collects the
-    total time that the team members have spent working on the user stories [in
-    minutes], say $t$. The team members would be previously instructed on how
+    total time that the team members have spent working on the user stories (in
+    minutes), say $t$. The team members would be previously instructed on how
     to track time spent working during a sprint with the help of an appropriate
     tool such as \textit{Toggl} (or any other tool that is deemed suitable).
     The chosen team member would then perform a simple calculation on their
@@ -454,7 +437,7 @@ Secondly, 2) is accompanied with the following questions and metrics:
     some small number, say $0.1$. If the ratio falls within the threshold
     interval, then the story points are considered to be an accurate
     representation of the time invested. The ratio can be altered to fit the
-    team's needs, and [the ratio] can be derived from the team's experience in
+    team's needs, and (the ratio) can be derived from the team's experience in
     the previous sprints and/or projects. The results, for a future reference,
     can be stored in a communication channel (such Slack, Discord, and so
     forth).
@@ -553,7 +536,7 @@ would have a designated role whose responsibility is to oversee any integration
 concerns and communicate with the other teams. The role would be assigned in a
 round-robin fashion (this way, each team member would have a chance to take on
 the role). Moreover, the person given this role would be leading the meetings
-[discussed in previous improvement step] and would utilize the metrics and
+(discussed in previous improvement step) and would utilize the metrics and
 measurement plans, notably M3.1 and M3.2.
 
 \section{Implementation of an SPI Initiative}
@@ -701,9 +684,18 @@ pursuit of a \textbf{suitable} approach to inter-team coordination.
 
 \section{Summary and Lessons Learned}
 \label{sec:summary}
-% In the summary section, you should briefly summarize what your report is
-% about and present your main findings/consequences.
-
+In this paper, we have discussed a software process tailored for the Lego Scrum
+workshops, and have identified several shortcomings of the process. As a
+result, an SPI effort was proposed to address the shortcomings with the help of
+GQM, and the process was redesigned accordingly. Simultaneously, the
+observations made were paired with relevant literature and studies to provide a
+more comprehensive overview of the issues at hand. Interestingly, it has been
+observed that the abundance of SPI techniques and models is rather overwhelming
+than helpful, and practitioners should exercise caution when selecting a
+particular technique or model. In addition, SPI awareness should be made a
+central priority in any development endeavor. Lastly, we have discussed the SoS
+approach and its applicability to large-scale projects, and briefly provided an
+alternative approach that is endorsed by Spotify.
 % This is used to generate the references section. See mybibfile.bib for the
 % bib sources.
 \bibliographystyle{IEEEtran}
