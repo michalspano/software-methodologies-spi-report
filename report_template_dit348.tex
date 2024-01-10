@@ -356,67 +356,70 @@ originally defined to evaluate defects in a set of NASA projects
 \cite{Caldiera1994}, though, over the years, it has been tailored to be
 applicable to a broader spectrum of projects.
 
-Before proceeding with the SPI initiative, let us define some notation. A goal
-is written as \textit{x}). A question follows the notion Q\textit{x.y}
-Similarly, a metric follows the notion M\textit{x.z}. A metric, in our context,
-provides a measurement plan with a general idea of how the data is to be
-collected and analyzed. In some cases, there's an example provided for the ease
-of understanding.
+Before proceeding with the SPI initiative, let us define the notation used in
+the remainder of this section. A goal is written as \textit{x}). A question
+follows the notation Q\textit{x.y}. Similarly, a metric follows the notation
+M\textit{x.z}. A metric, in our context, provides a measurement plan with a
+general idea of how the data is to be collected and analyzed. In some cases,
+there is an example provided that illustrates the metric in a more concrete
+manner.
 
 Based on the observations made in Section~\ref{sec:experiences}, the following
-goals are defined for the SPI proposal:
+\textbf{goals} are defined for the SPI proposal:
 
-\begin{enumerate}
-  \item Improve the clarity and consistency of task completion from the
-    development team’s viewpoint.
-  \item Enhance the estimation and planning with the help of story points
-    from the viewpoint of the development team. 
-  \item Strengthen cross-team communication and integration with a
-    designated role from the development team. 
-\end{enumerate}
-
-With that in mind, 1) is accompanied with the following questions and metrics:
+\noindent\fbox{
+  \parbox{\dimexpr\linewidth-10px}{
+    \begin{enumerate}
+      \item Improve the clarity and consistency of task completion from the
+        development team’s viewpoint.
+      \item Enhance the estimation and planning with the help of story points
+        from the viewpoint of the development team. 
+      \item Strengthen cross-team communication and integration with a
+        designated role from the development team. 
+    \end{enumerate}
+    }
+}
 
 \begin{itemize}
   \item \textbf{Q1.1}: What is the team members' understanding the DoD?
   \item \textbf{M1.1}: Number of items in the DoD that team members share a
-    common understanding of. The data would be obtained from the team members
-    in a designated questionnaire -- each team member would be asked to define,
-    in own words, what the items of the DoD are. Then, with the help of a
-    machine learning algorithm that is able to parse human language (e.g., a
-    recurrent neural network), the responses would be clustered into a set of
-    groups where each group represents an overlap of the responses. The number
-    of groups would correspond to the metric. In case such an algorithm is not
-    available, the responses can be manually clustered into groups. The
-    information would be stored on a local machine of one of the team members
-    and would not be shared with any third parties. Ultimatelt, the obtained
-    value should be as close to the total number of items in the DoD as
-    possible.
+    common understanding of. The data would be obtained from the members of the
+    team with a questionnaire -- each team member would be asked to define, in
+    their own words, what the items of the DoD are. Then, with the help of a
+    machine learning algorithm that is able to parse human language, the
+    responses would be clustered into a set of groups where each group contains
+    similar responses. The number of groups would correspond to the metric. In
+    case such an algorithm is not available, the responses can be manually
+    clustered into groups. The information would be stored on a local machine
+    of one of the team members and made accessible to the others (in an
+    anonymized manner). Ultimately, the higher the obtained value, the better
+    the team members understand the DoD.
   \item \textbf{Q1.2}: How consistently is the Definition of Done applied to
     carrying work related to user stories among the team?
-  \item \textbf{M1.2}: A formulate in the following manner is to be used:
+  \item \textbf{M1.2}: A formula in the following manner is to be used:
     $\frac{n_d}{n} \times 100$ (\%), where $n_d$ is the number of tasks that
-    followed the DoD principles when delivered to the PO, and $n$ is the number
-    of all tasks expected to be worked on within a set time frame (such as a
+    followed the DoD principles when being delivered to the PO, and $n$ is the
+    number of all tasks expected to be worked on within a set time frame (such
+    as a
     sprint). In the context of the Lego Scrum workshop, it is difficult to keep
     track of how many times the DoD was applied, since the team members may
-    report inaccurate data. However, in the context of a real-world software
-    project, this metric can be easily obtained by observing whether the DoD
-    was appended to a, say, merge request (or a pull request) that was merged into
-    the \textit{main} branch of the project's repository. Nevertheless, for our case, we
-    assume that the team members are honest and report accurate data.
-    Subsequently, the aforementioned formula is applied and team members are
-    made aware of the results. The calculations are to be stored (and
+    report inaccurate data. Yet, in a real-world software project, obtaining
+    this metric is straightforward by checking if the DoD was attached to a
+    \textit{merged} merge request (or pull request) in the \textit{main}
+    branch of the repository where the project resides.
+    Nevertheless, for our case, we
+    assume that team members are honest and report accurate data.
+    Subsequently, the aforementioned formula is applied and team members become
+    aware of the results. The calculations are to be stored (and
     performed) on a local machine of one of the team members. Supposing that
-    each sprint is evaluted separately, the obtained values can be compared and
-    an increase or decrease in the metric can be observed. Ideally, each sprint
+    each sprint is evaluated separately, the obtained values may serve as a
+    guideline for the current and future sprints.
+    Ideally, each sprint
     should yield a value of $\approx 100$. Team members are encouraged to set
     an acceptable threshold interval for the metric, say $[90, 100]$, and
     strive to achieve a value within the interval. This interval can fluctuate
     depending on the team's needs.
 \end{itemize}
-
-Secondly, 2) is accompanied with the following questions and metrics:
 
 \begin{itemize}
   \item \textbf{Q2.1}: How accurately do the assigned user story points align
@@ -426,119 +429,117 @@ Secondly, 2) is accompanied with the following questions and metrics:
     at the beginning of a sprint by all team members). For this example, let's
     say that one story point represents 5 minutes. Then, once the sprint has
     elapsed, a randomly chosen team member collects the total number of story
-    points completed during the sprint, say $s$, and afterwards collects the
-    total time that the team members have spent working on the user stories (in
-    minutes), say $t$. The team members would be previously instructed on how
-    to track time spent working during a sprint with the help of an appropriate
-    tool such as \textit{Toggl} (or any other tool that is deemed suitable).
-    The chosen team member would then perform a simple calculation on their
-    local machine in the following way: $\frac{s}{t}$. In this case, the ideal
-    ratio is $\approx \frac{1}{5}$. A threshold interval can be defined as
-    $[\frac{1}{5} - \epsilon, \frac{1}{5} + \epsilon]$, where $\epsilon$ is
-    some small number, say $0.1$. If the ratio falls within the threshold
-    interval, then the story points are considered to be an accurate
-    representation of the time invested. The ratio can be altered to fit the
-    team's needs, and (the ratio) can be derived from the team's experience in
-    the previous sprints and/or projects. The results, for a future reference,
-    can be stored in a communication channel (such Slack, Discord, and so
-    forth).
+    points completed during the sprint, say $s$. Afterwards, they collect the
+    total time (in minutes) the team has spent working on the user stories, say
+    $t$. The team members would be previously instructed on how to
+    \textit{track} time with the help of an appropriate tool, such as
+    \textit{Toggl} (or any other tool that is deemed suitable). The chosen team
+    member would then perform a simple calculation on their local machine,
+    namely to take the ratio of the two values, i.e., $\frac{s}{t}$. In this
+    case, the ideal ratio is $\approx \frac{1}{5}$. A threshold interval can be
+    defined as $[\frac{1}{5} - \epsilon, \frac{1}{5} + \epsilon]$, where
+    $\epsilon$ is some small number, say $0.1$. If the obtained ratio falls
+    within the interval, then the story points are considered to be an accurate
+    representation of the time invested. The ratio and interval threshold can
+    be adjusted to suit the team's preferences, based on previous sprints and
+    domain experience. The results are recorded in a communication channel like
+    Slack or Discord for future reference. 
   \item \textbf{Q2.2}: How can story points enhance the workload distribution
     among team members?
   \item \textbf{M2.2}: 
     Establish how many story points a team member is expected to complete
     during a sprint (this value is decided by the team members at the beginning
-    of a sprint), namely $m$. Assume that team members should work on an equal
-    basis, i.e., they should complete the same number of story points in a
-    given time frame (in our case, a sprint). Keep track of the number of story
-    points that each team member completes during a sprint, and, once the
-    sprint is over, assign them to variables $x_1, x_2, \dots, x_n$, where $n$
-    is the size of the team. Furthermore, it is the responsibility of each team
-    member to keep track of their own story points---how they do it is up to
-    them. At the end of the sprint, a randomly chosen team member collects all
-    data entries and performs a calculation on their local machine in the
-    following manner: $\beta = \sum_{i=1}^{n} |x_i - m|$. Herein, $\beta$ is an
-    arbitrary value that represents the workload distribution among the team
-    members. The closer $\beta$ is to $0$, the more evenly distributed the
-    workload is. In that essence, similarly to the previous metric, a threshold
-    interval can be defined, and an appropriate $\epsilon$ can be chosen (this
-    is to be determined by the team members based on their experience and
-    intuition).
+    of a sprint). We label this value as $m$. Assume that team members should
+    work on an equal basis, i.e., they should complete the same number of story
+    points in a given time frame (in our case, a sprint). Keep track of the
+    number of story points that each team member completes during a sprint.
+    Once the sprint is over, assign them to variables $x_1, x_2, \dots, x_n$,
+    where $n$ is the size of the team. Furthermore, it is the responsibility of
+    each team member to keep track of their own story points---how they do it
+    is up to them. At the end of the sprint, a randomly chosen team member
+    collects all data entries, and performs a calculation on their local
+    machine in the following fashion: $\beta = \sum_{i=1}^{n} |x_i - m|$.
+    Herein, $\beta$ is an arbitrary value that represents the workload
+    distribution among the individual team members. The closer $\beta$ is to
+    $0$, the more evenly distributed the workload is. In that essence,
+    similarly to the previous metric, an acceptable threshold interval (with an
+    appropriate $\epsilon$) can be defined. These values would be determined by
+    the members of the team based on their experience and intuition.
 \end{itemize}
 
-Lastly, 3) is accompanied with the following questions and metrics:
-
 \begin{itemize}
-  \item \textbf{Q3.1}: How effective are the cross-team communication efforts?
-  \item \textbf{M3.1}: An averaged satisfaction score that is obtained from the
-    team members and all other parties involved in any cross-team meetings. A
+  \item \textbf{Q3.1}: How effective is the cross-team communication effort?
+  \item \textbf{M3.1}: Consider an averaged satisfaction score obtained from
+    both team members and other parties involved in cross-team meetings. A
     traditional Likert scale from $1 \to 5$ can be used to obtain the score,
     where $1$ corresponds to \textit{"Strongly dissatisfied"} and $5$
     corresponds to \textit{"Strongly satisfied"}. Ideally, the team should
     strive to obtain a score of $\approx 5$. A team member who has volunteered
     (or has been randomly selected, if no one volunteers) will be responsible
-    to notify all people involved in the meeting about the survey (typically,
-    once the meeting has ended) and provide them with the appropriate link. The
-    survey itself shall not take more than 1 minute so that the participants do
-    fill it in. The survey can be constructed with the help of, for instance,
-    Google Forms, and the results can be stored in a Google Sheets document.
-    Therein, the team members can observe the results which are updated in
-    real-time and calculated automatically, and, if necessary, take appropriate
-    actions. The sheet can be re-used for future meetings too.
+    to notify all people involved in the given meeting about the survey
+    (typically, once the meeting has ended) and provide them with an
+    appropriate link to participate in the survey. The survey itself shall not
+    take more than 1 minute so participants do actually fill it in. The survey
+    can be constructed with the help of, for instance, Google Forms, and the
+    results can be stored in a Google Sheets document. Therein, the team
+    members can observe the results which are updated in real-time and
+    calculated automatically. The sheet can be re-used for future meetings too.
   \item \textbf{Q3.2}: How well do contributions from all teams function together?
-  \item \textbf{M3.2}: The number of integration problems occurring during the
-    project (or during a sprint, if a more granular approach is desired) is to
-    be counted. The data is to be obtained from the team members and the PO(s)
-    by a volunteer (or a randomly selected team member, if no one volunteers from
-    the team). The data is to be stored in a Google Sheets document or a simple
-    Markdown/text file (which is distributed to all team members). The data
-    is updated continuously, meaning that, if required, the team members can
-    take appropriate actions in a timely manner.
+  \item \textbf{M3.2}: Record the number of integration problems occurring
+    during a project (or during a sprint, if a more granular approach is
+    desired). The data is to be obtained from other teams and the PO(s) by a
+    volunteer (or a randomly selected team member, if no one volunteers from
+    the team). The gathered data is to be stored in a Google Sheets document or
+    a simple Markdown/text file (which is distributed to all team members).
+    Furthermore, the data is continuously updated, allowing team members to
+    take timely actions if necessary. 
 \end{itemize}
 
 In terms of 1), items in the DoD are to be continuously reviewed and updated
-based on the team's needs. Observations from the matrics M1.1 and M1.2 are to
-act as a guideline for the team members to identify the shortcomings of the
-DoD. For instance, if the team members are not able to unable to grasp the
-items of the DoD, then they are to be rephrased in a more understandable
-manner. On the other hand, if the team members consistently fail to apply the
-DoD to their work, then, perhaps some of the items of the current DoD may be
-cumbersome to follow, and, as a result, the DoD is subject to be revised.
+based on the needs of the team. Observations from the metrics M1.1 and M1.2 are
+to act as a guideline for the team members to identify possible shortcomings of
+the current DoD. For instance, if team members are unable to grasp the items of
+the DoD, then they should be rephrased in a more comprehensible manner. On the
+other hand, if team members consistently fail to apply the DoD to their work,
+then, perhaps, some of the items of the current DoD may be cumbersome to
+follow. As a result, the DoD should be revised and updated accordingly.
 Additionally, The Kanban board would be extended with a new column titled
 \textit{QA} (which stands for \textit{Quality Assurance}). The column would
 hold user stories that are subject to be reviewed based on the principles of
-the team's DoD. Afterwards, if all items of the DoD are satisfied, the user
-story is moved to the \textit{Done} column. Otherwise, the user story is moved
-back to the \textit{To Do} column. So, the updated flow would be as follows:
-$\textit{To Do} \to \textit{In Progress} \leftrightarrow \textit{QA} \to
-\textit{Done}$.
+the team's DoD and the PO's criteria. Afterwards, if all such criteria are
+satisfied, the user story is placed to the \textit{Done} column. Otherwise, the
+user story is moved back to the \textit{To Do} column. This way, the team
+members would be encouraged to follow the DoD principles and, in turn, enhance
+the quality of the product.
 
-% TODO: revisit if these are actually feasible.
+Regarding 2), using the metric 2.1, team members obtain a clear indication of
+how accurate their estimations are. As a result, they would be encouraged to
+investigate reasons behind possible deviations from the ideal ratio. Thereby,
+they would practice their estimation capabilities. This would not only improve
+the team's overall performance, but would also help to mature the process
+itself. What's more, the metric 2.2 would help to uncover any workload
+discrepancies among the team. Concretely, the two extrema values (i.e., the
+minimum and the maximum) would be taken from the set of values $x_1, x_2,
+\dots, x_n$, and the team members would be encouraged to discuss the reasons
+behind the discrepancies. Then, for an upcoming sprint, the team member who
+underperformed would be assigned a smaller number of story points, and, vice
+versa, the team member who overperformed would be assigned a larger number of
+story points (team members have the authority to decide on altering the number
+of story points; however, in case of disagreement, $20\%$ of the story points
+can be added or subtracted).
 
-Regarding 2), using the metric of 2.1, team members obtain a clear indication
-of how accurate their estimations are. As a result, they would be encouraged to
-investigate the reasons behind the deviations from the ideal ratio, and, in
-turn, practice their estimation capabilities. Doing so would not only enhance
-the team's overall performance, but also, inherently, mature the process.
-What's more, the metric 2.2 would help to uncover any workload discrepancies
-among the team. Concretely, the two extrema (i.e., the minimum and the maximum)
-would be taken from the set of values $x_1, x_2, \dots, x_n$, and the team
-members would be encouraged to discuss the reasons behind the discrepancies.
-For the upcoming sprint, the team member who underperformed would be assigned a
-smaller number of story points, and, vice versa, the team member who
-overperformed would be assigned a larger number of story points (the alteration
-of the number of story points is to be decided by the team members, though, in
-case of a disagreement, $20\%$ of the number of story points is to be added or
-subtracted).
+To solve 3), we would like to suggest that all team schedules include several
+meetings throughout the workshop (e.g., once per hour) to discuss any
+integration issues that may occur or have been encountered. Secondly, we would
+have a designated role whose responsibility is to oversee any integration
+concerns and communicate with other teams. The role would be assigned in a
+round-robin fashion (this way, each team member would have an equal chance to
+take on the role). Moreover, the assigned person would be responsible to lead
+the meetings (discussed in the previous improvement step) and would utilize the
+metrics and measurement plans, particularly M3.1 and M3.2.
 
-To address 3), firstly, we intend to propose that all teams schedule several
-meetings throughout the workshop (e.g., once an hour) to discuss any
-integration problems that might arise or have been encountered. Secondly, we
-would have a designated role whose responsibility is to oversee any integration
-concerns and communicate with the other teams. The role would be assigned in a
-round-robin fashion (this way, each team member would have a chance to take on
-the role). Moreover, the person given this role would be leading the meetings
-(discussed in previous improvement step) and would utilize the metrics and
-measurement plans, notably M3.1 and M3.2.
+% TODO: start here with the final review. The following and onwards are not
+% reviewed yet.
 
 \section{Implementation of an SPI Initiative}
 \label{sec:implementation}
