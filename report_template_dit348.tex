@@ -74,10 +74,10 @@ This paper discusses the design of a software process in the context of Lego
 Scrum workshops as part of the course DIT348 Software Development Methodologies
 offered by Gothenburg University (Sweden). Subsequently, the paper provides
 insights about software process improvement (SPI) techniques and proposes an
-SPI initiative with a redesigned process proposal (accompannied with a SPEM 2.0
-diagram). Ultimately, the paper discusses various challenges that practitioners
-encounter when conducting SPI efforts, and provides an additional insight into
-the feasability of the Scrum of Scrums methodology.
+SPI initiative with a redesigned process (accompanied with a SPEM 2.0 diagram).
+Ultimately, the paper discusses various challenges that practitioners encounter
+when conducting SPI efforts, and provides an additional insight into the
+feasibility of the Scrum of Scrums methodology.
 \end{abstract}
 
 \section{Introduction}
@@ -91,17 +91,18 @@ tools, methods, and practices to produce a software product or a more general
 software service \cite{Munch2012}, \cite{Humphrey1989}. With the increasing
 complexity of software systems, the need for a well-defined software process
 has become more and more significant. Basili and Rombach \cite{Basili1988}
-state that the software engineering processes require \textbf{tailorability}
+state that software engineering processes require \textbf{tailorability}
 because of the diversity of the software products and the different
 environments in which they are developed, hence the need for a software process
 improvement (hereafter SPI) initiative.
 
-This paper analyzes a designed software process and proposes an SPI initiative 
-in the context of the Lego Scrum workshops with a redesigned process proposal.
-The claims made are supported by peer-reviewed literature and the course
-material alongside several research studies that are conducted by the frontiers
-of the software engineering field (e.g., \cite{Basili1988},
-\cite{Caldiera1994}, \cite{Schwaber2020}).
+This paper analyzes a designed software process and proposes an SPI
+initiative---based on which the process is to be improved---in the context of
+the Lego Scrum workshops. The text is complemented with knowledge and
+experiences from peer-reviewed literature and the course material alongside
+several research studies are conducted by the frontiers of the software
+engineering field (e.g., \cite{Basili1988}, \cite{Caldiera1994},
+\cite{Schwaber2020}).
 
 \section{Process Defined for the Scrum Workshop}
 \label{sec:process}
@@ -111,57 +112,61 @@ of the software engineering field (e.g., \cite{Basili1988},
 % reasons for why you did or did not use elements from these three practices.
 
 The defined process is titled {\fontfamily{qhv}\selectfont AKAMMO} and
-utilizes concepts from Scrum and Incremental Delivery, and to a lesser extent,
+utilizes concepts from Scrum, Incremental Delivery, and, to a lesser extent,
 User Story Practice \cite{DIT348A1}. Scrum provides a flexible and adaptive
-approach to project management, and encourages transparency in terms of the
+approach to project management and encourages transparency in terms of the
 project's progress and the issues encountered \cite{Schwaber2020}. Scrum, by
 definition, is meant to be applied in an iterative manner, which is why a
 conjunction with Incremental Delivery becomes a natural choice
 \cite{Schwaber2020}, \cite{Srivastava2017}, \cite{Schwaber1997}.
 
 Initially, the process assumes a set of user stories that are to be implemented
-(and are prioritized by the Product Owner, hereafter PO). Afterwards, the team
+(and are prioritized by the Product Owner [hereafter PO]). Afterwards, the team
 members analyze the user stories and decide whether they require a further
 elicitation of requirements (which is discussed with the PO) or whether they
 can be implemented as they are.
-Moreover, before each sprint, \textbf{sprint planning} takes place. It is an
-activity that aims to split up the user stories into more granular requirements
-that, once implemented, satisfy the acceptance criteria of a particular user
-story, and, additionally, sprint planning is thought of as a way to delegate
-requirements to the members of the team.
+Moreover, at the beginning of each sprint, \textbf{sprint planning} takes
+place. It is an activity that aims to split up the user stories into more
+granular requirements, where each requirement is accompanied with a set of
+acceptance criteria. The requirements are then assigned to the members of
+the team---the delegation of requirements is carried out in a way that the team
+members have agreed upon, although, in case of a disagreement, round-robin,
+random choice, or any other method can be used. 
 
 Subsequently, the requirements are assigned \textbf{story points} that
 correspond to the difficulty of their implementation (i.e., the higher
 the number, the more difficult the implementation) based on the Fibonacci
-sequence. Strikingly, Tamrakar and J\o{}rgensen \cite{Tamrakar2012} observe
-that the Fibonacci scale (among other non-linear scales) eliminates the bias
-introduced by any linear scale such that humans tend to be biased towards the
-middle of the scale, and thereby non-linear scales yield more accurate results.
+sequence. Strikingly, Tamrakar and J\o{}rgensen \cite{Tamrakar2012} note that
+the Fibonacci scale, along with other non-linear scales, eliminates a bias
+present in linear scales, where individuals tend to favor the middle.
+Consequently, non-linear scales yield more accurate results.
 
 Furthermore, a \textbf{Kanban board} is used throughout the workshop to
-categorize each user story into following columns: \textit{To Do}, \textit{In
-Progress}, \textit{Done}. The reason why a Kanban board was considered can be
-supported by a claim made by Ahmad et al. \cite{Ahmad2014} suggesting that a
-Kanban board provides visibility to the [software] development process,
-communicates priorities, and highlights bottlenecks. No type of a board is
-assumed, either a physical or a digital board can be used at ease.
+categorize each requirement into following columns: (i) \textit{To Do}, (ii)
+\textit{In Progress}, (iii) \textit{Done}. The reason why a Kanban board was
+considered to be a part of the process can be supported by a claim made by
+Ahmad et al. \cite{Ahmad2014} suggesting that a Kanban board provides
+visibility to a [software] development process, communicates priorities, and
+highlights bottlenecks. However, no specific type of the board is
+assumed---physical or digital boards are equally viable.
 
-What's more, a sprint lasts an hour and at the end of each sprint, a meeting
-takes place which is a conjunction of a sprint review and a sprint
-retrospective (adapted from Scrum \cite{Schwaber2020}). Herein, the team
-members discuss the difficulties they encountered and evaluate the overall
-progress carried out. Consequently, this meeting results in a definition of an
-\textbf{increment} that is to be delivered to the PO.
+What's more, a sprint lasts an hour, and as the end of the sprint approaches, a
+meeting, which combines a sprint review and a sprint retrospective, is held
+(adapted from Scrum \cite{Schwaber2020}). During the meeting, the team
+discusses difficulties they encountered and evaluates the overall progress
+carried out. Additionally, this meeting should yield an \textbf{increment}
+which the team has produced over the course of the sprint. It is, afterwards,
+delivered to the PO once the meeting has concluded.
 
 The process, by default, does not schedule any breaks; however, there is a
-possibility of a so-called \textit{emergency break} that can be called by any
+possibility of a so-called \textit{emergency break} which can be called by any
 team member at most once every 30 minutes. Breaks on an individual basis are
-allowed, but shall not interfere with the team's progress. In a typical Scrum
-environment, stand-up meetings are held continuously for a set time frame
-(e.g., 15 minutes) \cite{Schwaber2020}. However, in the context of the Lego
-Scrum workshop, the team is not obliged to hold such meetings, since the team
-only consists of six members, and the workshop is not meant to last longer than
-four hours.
+allowed, but should not interfere with the team's progress. In a typical Scrum
+environment, stand-up meetings are held repeatedly and last for a short period,
+e.g., 15 minutes \cite{Schwaber2020}. However, in the context of the Lego Scrum
+workshop, the team is not obliged to hold such meetings, because merely six
+members are involved in the team, and the workshop is not meant to last longer
+than four hours.
 
 \section{Experiences in the Scrum Workshop}
 \label{sec:experiences}
